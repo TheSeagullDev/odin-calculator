@@ -18,7 +18,23 @@ function divide(a, b)
     return a / b;
 }
 
-console.log(add(10, 4));
-console.log(subtract(10, 4));
-console.log(multiply(10, 4));
-console.log(divide(10, 4));
+function operate(a, b, operand)
+{
+    switch (operand)
+    {
+        case "add":
+            return add(a, b);
+        case "subtract":
+            return subtract(a, b);
+        case "multiply":
+            return multiply(a, b);
+        case "divide":
+            return divide(a, b);
+        default:
+            return "ERROR";
+    }
+}
+
+let first;
+let second;
+let operand;
