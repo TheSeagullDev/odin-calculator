@@ -35,6 +35,12 @@ function operate(a, b, operand)
     }
 }
 
-let first;
-let second;
-let operand;
+
+
+let first = null;
+let second = null;
+let operand = null;
+const display = document.querySelector("#display");
+
+
+
