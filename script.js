@@ -15,7 +15,7 @@ function multiply(a, b)
 
 function divide(a, b)
 {
-    return a / b;
+    return b ? Math.round(a / b * 1000000) / 1000000 : "Nice try ;)";
 }
 
 function operate(a, b, operand)
@@ -68,8 +68,15 @@ function updateDisplay(value)
         second = "";
         operand = "";
     }
-    else if(!numbers.includes(value) && first)
+    else if(!numbers.includes(value) && first && !second)
     {
+        operand = value;
+    }
+    else if(!numbers.includes(value) && first && second)
+    {
+        display.textContent = operate(first, second, operand);
+        first = display.textContent;
+        second = "";
         operand = value;
     }
     else if(operand && numbers.includes(value) && !second)
