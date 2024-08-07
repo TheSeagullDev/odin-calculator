@@ -20,8 +20,8 @@ function divide(a, b)
 
 function operate(a, b, operand)
 {
-    a = parseInt(a);
-    b = parseInt(b);
+    a = parseFloat(a);
+    b = parseFloat(b);
     switch (operand)
     {
         case "add":
